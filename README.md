@@ -23,6 +23,6 @@ npm run build
 
 Vue 3, Vite, JavaScript, Vue Router, Pinia, Tailwind CSS, VueUse, Chart.js, Vitest.
 
-## Suivi GitLab
+## Suivi
 
-Jalon **Version 1**. Labels : `fonction`, `interface`, `technique`. Les issues sont numérotées dans l’ordre du chantier.
+Jalon **Version 1** sur GitHub. Labels : `fonction`, `interface`, `technique`. Les issues sont numérotées dans l’ordre du chantier.
