@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --color-paper: #f4efe6;
+  --color-ink: #1c1915;
+  --color-moss: #1d6843;
+  --color-clay: #a33b24;
+  --color-line: #e4dcd0;
+  --color-card: #fbf8f3;
+  --color-muted: #5e574e;
+  --color-sand: #ebe4d8;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    overflow-x: clip;
+    background:
+      radial-gradient(900px 420px at 50% -12%, rgb(29 104 67 / 0.09), transparent 62%),
+      var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgb(29 104 67 / 0.18);
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+
+  .field input,
+  .field select {
+    height: 3rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+    background: var(--color-card);
+    padding-inline: 1rem;
+    color: var(--color-ink);
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .field input:focus,
+  .field select:focus {
+    border-color: var(--color-moss);
+    box-shadow: 0 0 0 3px rgb(29 104 67 / 0.16);
+  }
+
+  .btn-primary {
+    height: 3.25rem;
+    width: 100%;
+    border: 0;
+    border-radius: 999px;
+    background: var(--color-moss);
+    color: white;
+    font-size: 1rem;
+    font-weight: 560;
+    cursor: pointer;
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  .btn-quiet {
+    border: 0;
+    background: transparent;
+    color: var(--color-clay);
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+
+  .btn-quiet:focus-visible {
+    outline: 2px solid var(--color-moss);
+    outline-offset: 3px;
+  }
+}
